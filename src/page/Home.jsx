@@ -1,30 +1,23 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import banner from "/banner.png";
+import AdditionalInfo from "../components/AdditionalInfo/AdditionalInfo";
+import Advertise from "../components/Advertise/Advertise";
+import Award from "../components/Award/Award";
+import NewBanner from "../components/Banner/NewBnner"
+import BestSellers from "../components/BestSells/BestSellers";
+import NewArrivals from "../components/NewArrivals/NewArrivals";
+import SpecialOffers from "../components/Offers/SpecialOffers";
 
 const Home = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
-    <Slider {...settings}>
-      <div>
-        <img src={banner} alt="" />
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-    </Slider>
+    <div>
+      <NewBanner />
+      <AdditionalInfo/>
+      <Advertise/>
+      <NewArrivals/>
+      <BestSellers/>
+      <Award/>
+      <SpecialOffers/>
+    </div>
   );
-};
+}
 
-export default Home;
+export default Home
